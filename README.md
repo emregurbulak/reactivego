@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## ReactiveGo App
+### Now the project under construction.If you want to add or edit something please do not hesitate
+
+ReactiveGo written with ReactJs and Golang. The aim of the project is to create a simple understandable structure from end to end. You can find the roof required for the start of the project in this project and proceed through it.
+
 ## Available Scripts
 
 In the project directory, you can run:
