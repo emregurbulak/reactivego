@@ -1,0 +1,126 @@
+.landing-page-wrapper .header-section .logo {
+    padding-right: 0;
+    flex-basis: auto;
+    float: left;
+}
+
+.landing-page-wrapper .header-section .demo {
+    float: right;
+    margin-inline-end: 3%;
+    margin-top: 3%;
+}
+
+  /* -----------------------------------
+    01- Header Section Start
+  --------------------------------------*/
+  .header-section {
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+    right: 0;
+    padding: 20px 0;
+    top: 0;
+    z-index: 999;
+  }
+  .header-section.stick {
+    -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    background-color: #413232;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+  }
+
+  .landing-page-wrapper .header-section.stick {
+    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+    background-color: #ffcfcf;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+  }
+  /* -----------------------------------
+    01- Header Section End
+  --------------------------------------*/
+
+   /*-----------------------------------
+    02- Logo Start
+    ------------------------------------*/
+
+  .logo a .sticky-logo {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      opacity: 0;
+      padding-left: 15px;
+  }
+
+  .stick .logo{
+    color: #0056ff;
+    margin-top: 3px;
+  }
+
+   /*-----------------------------------
+    02- Logo End
+    ------------------------------------*/
+
+
+  .demo-btn {
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 24px;
+    margin-top: 0;
+    padding: 6px 35px;
+    text-transform: uppercase;
+  }
+  .stick .demo-btn {
+    border: 2px solid #0056ff;
+    color: #0056ff;
+      margin-top: 3px;
+  }
+  .demo-btn:hover {
+    background-color: #0056ff;
+    border-color: #0056ff;
+    color: #ffffff !important;
+  }
+
+
+  .demo-btn:hover {
+      background-color: #f0542d;
+      border-color: #f0542d;
+        color: #ffffff;
+    }
+    .header-section .demo-btn {
+        border-color: #ffffff;
+        background-color: #ffffff;
+        color: #000000 !important;
+        font-weight: 600;
+    }
+    .header-section .demo-btn:hover {
+        border-color: #f0542d;
+        background-color: #f0542d;
+        color: #ffffff !important;
+    }
+    .stick.header-section .demo-btn {
+        border-color: #000000;
+        background-color: #000000;
+        color: #ffffff !important;
+    }
+    .stick.header-section .demo-btn:hover {
+        border-color: #f0542d;
+        background-color: #f0542d;
+        color: #ffffff !important;
+    }
+    .stick .demo-btn {
+      border: 2px solid #f0542d;
+      color: #f0542d;
+    }
+    .stick .demo-btn:hover {
+        color: #fff;
+    }
