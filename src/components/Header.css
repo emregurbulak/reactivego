@@ -2,14 +2,17 @@
     padding-right: 0;
     flex-basis: auto;
     float: left;
+    margin-left: 1%;
 }
 
 .landing-page-wrapper .header-section .demo {
     float: right;
     margin-inline-end: 3%;
-    margin-top: 3%;
 }
 
+.body{
+	padding-top: 0px;
+}
   /* -----------------------------------
     01- Header Section Start
   --------------------------------------*/
@@ -18,27 +21,21 @@
     left: 0;
     position: absolute;
     right: 0;
-    padding: 20px 0;
+    padding: 12px 0;
     top: 0;
     z-index: 999;
   }
   .header-section.stick {
     -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
     animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-    background-color: #413232;
+    background-color: #f7f4f4;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
     position: fixed;
     top: 0;
+    max-height: 9%;
   }
 
-  .landing-page-wrapper .header-section.stick {
-    animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-    background-color: #ffcfcf;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 0;
-  }
   /* -----------------------------------
     01- Header Section End
   --------------------------------------*/
@@ -58,7 +55,6 @@
 
   .stick .logo{
     color: #0056ff;
-    margin-top: 3px;
   }
 
    /*-----------------------------------
@@ -101,21 +97,25 @@
         background-color: #ffffff;
         color: #000000 !important;
         font-weight: 600;
+        height: 30px;
     }
     .header-section .demo-btn:hover {
         border-color: #f0542d;
         background-color: #f0542d;
         color: #ffffff !important;
+        height: 30px;
     }
     .stick.header-section .demo-btn {
         border-color: #000000;
         background-color: #000000;
         color: #ffffff !important;
+        height: 30px;
     }
     .stick.header-section .demo-btn:hover {
         border-color: #f0542d;
         background-color: #f0542d;
         color: #ffffff !important;
+        height: 30px;
     }
     .stick .demo-btn {
       border: 2px solid #f0542d;
