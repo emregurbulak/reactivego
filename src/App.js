@@ -11,7 +11,7 @@ function App() {
         <div>
             <img src={logo} className="App-logo" alt="logo_transparent" width="250" height="400"/>
             <p>
-              Reactive go ise a sample project with react and go.
+              Reactivego ise a sample project with react and go.
             </p>
             <p><a
               className="App-link"
@@ -30,40 +30,7 @@ function App() {
               Learn Golang
             </a></p>
             <p>
-              "(new Array[12]).map[`sdfgkjdsfjndfjbdsfjkbjfdbvj`].join()}"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
-            </p>
-            <p>
-              "Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus"
+              {[...new Array(30)].map(()=>"Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus").join(`\n`)}
             </p>
         </div>  
       </header>
