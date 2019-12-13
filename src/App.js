@@ -29,9 +29,6 @@ function App() {
             >
               Learn Golang
             </a></p>
-            <p>
-              {[...new Array(30)].map(()=>"Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus Lorem İmpus").join(`\n`)}
-            </p>
         </div>  
       </header>
     </div>
