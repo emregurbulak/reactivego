@@ -1,14 +1,12 @@
 // types of action
-const Types = {
-  PAGE_ITEM: "PAGE_ITEM"
-};
+const SET_REACTIVE_ITEM = “setReactiveItem”;
 // actions
-const pageItem = task => ({
-  type: Types.PAGE_ITEM,
-  payload: task
+const reactiveItem = item => ({
+  type: SET_REACTIVE_ITEM, 
+  payload: item
 });
 
 export default {
-  createItem,
-  Types
+  reactiveItem,
+  SET_REACTIVE_ITEM
 };
