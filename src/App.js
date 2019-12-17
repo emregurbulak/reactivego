@@ -2,8 +2,19 @@ import React from 'react';
 import './App.css';
 import logo from "./logo_transparent.png"
 import Header from './components/Header';
+import ACTIONS from "./modules/action";
+import { connect } from "react-redux";
 
 function App() {
+
+  handleChangePage = () => {
+    if(!this.props.isDemoPage){
+      this.props.reactiveItem(true);
+    }else{
+      this.props.reactiveItem(true);
+    }
+  };
+
   return (
     <div className="App"> 
       <Header/>
@@ -15,7 +26,7 @@ function App() {
             </p>
             <p><a
               className="App-link"
-              href="https://reactjs.org"
+              href= "https://golang.org"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -29,10 +40,22 @@ function App() {
             >
               Learn Golang
             </a></p>
+            <button onclick={this.handleChangePage}>Demo</button>
         </div>  
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  isDemoPage: state.isDemoPage
+});
+
+const mapDispatchToProps = dispatch => ({
+  reactiveItem: item => dispatch(ACTIONS.reactiveItem(item))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

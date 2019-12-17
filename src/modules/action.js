@@ -1,5 +1,6 @@
 // types of action
-const SET_REACTIVE_ITEM = “setReactiveItem”;
+const SET_REACTIVE_ITEM = "setReactiveItem";
+
 // actions
 const reactiveItem = item => ({
   type: SET_REACTIVE_ITEM, 
