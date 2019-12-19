@@ -1,50 +1,69 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import logo from "./logo_transparent.png"
 import Header from './components/Header';
 import ACTIONS from "./modules/action";
 import { connect } from "react-redux";
 
-function App() {
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.handleChangePage = this.handleChangePage.bind(this);
+
+    this.state = {};
+  }
 
   handleChangePage = () => {
     if(!this.props.isDemoPage){
       this.props.reactiveItem(true);
     }else{
-      this.props.reactiveItem(true);
+      this.props.reactiveItem(false);
     }
   };
 
-  return (
-    <div className="App"> 
-      <Header/>
+  rederMainPageComponents(){
+    if(this.props.isDemoPage){
+      return (
+        <header className="App-header"></header>
+      )
+    }
+    return( 
       <header className="App-header">
-        <div>
-            <img src={logo} className="App-logo" alt="logo_transparent" width="250" height="400"/>
-            <p>
-              Reactivego ise a sample project with react and go.
-            </p>
-            <p><a
-              className="App-link"
-              href= "https://golang.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a></p>
-            <p><a
-              className="App-link"
-              href="https://golang.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Golang
-            </a></p>
-            <button onclick={this.handleChangePage}>Demo</button>
-        </div>  
+          <div>
+              <img src={logo} className="App-logo" alt="logo_transparent" width="250" height="400"/>
+              <p>
+                Reactivego ise a sample project with react and go.
+              </p>
+              <p><a
+                className="App-link"
+                onClick={this.handleChangePage}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn React
+              </a></p>
+              <p><a
+                className="App-link"
+                href="https://golang.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn Golang
+              </a></p>
+          </div>  
       </header>
-    </div>
-  );
+    )
+  }
+
+  render(){
+    return (
+      <div className="App"> 
+        <Header/>
+        {this.rederMainPageComponents()}
+      </div>
+    );
+  }
+  
 }
 
 const mapStateToProps = state => ({
