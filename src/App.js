@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import logo from "./logo_transparent.png"
 import Header from './components/Header';
+import Main from './components/mainPage/Main';
 import ACTIONS from "./modules/action";
 import { connect } from "react-redux";
 
@@ -28,30 +28,7 @@ class App extends Component {
       )
     }
     return( 
-      <header className="App-header">
-          <div>
-              <img src={logo} className="App-logo" alt="logo_transparent" width="250" height="400"/>
-              <p>
-                Reactivego ise a sample project with react and go.
-              </p>
-              <p><a
-                className="App-link"
-                onClick={this.handleChangePage}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn React
-              </a></p>
-              <p><a
-                className="App-link"
-                href="https://golang.org"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Learn Golang
-              </a></p>
-          </div>  
-      </header>
+      <Main/>
     )
   }
 
