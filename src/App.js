@@ -8,18 +8,8 @@ import { connect } from "react-redux";
 class App extends Component {
   constructor(props){
     super(props);
-    this.handleChangePage = this.handleChangePage.bind(this);
-
     this.state = {};
   }
-
-  handleChangePage = () => {
-    if(!this.props.isDemoPage){
-      this.props.reactiveItem(true);
-    }else{
-      this.props.reactiveItem(false);
-    }
-  };
 
   rederMainPageComponents(){
     if(this.props.isDemoPage){
@@ -27,7 +17,7 @@ class App extends Component {
         <header className="App-header"></header>
       )
     }
-    return( 
+    return ( 
       <Main/>
     )
   }
