@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {animateScroll as scroll} from 'react-scroll';
-import logo from "../assets/img/header_transparent.png"
+import logo from "../../assets/img/header_transparent.png"
 import './Header.css';
+import ACTIONS from "../../modules/action";
+import { connect } from "react-redux";
 
 class Header extends Component{
 	constructor(props){
@@ -9,7 +11,16 @@ class Header extends Component{
         this.state = {};
         this.handleScroll = this.handleScroll.bind(this);
         this.scrollToTop = this.scrollToTop.bind(this);
+        this.handleClickedDemoButton = this.handleClickedDemoButton.bind(this);
     }
+
+    handleClickedDemoButton() {
+    if(!this.props.isDemoPage){
+          this.props.reactiveItem(true);
+        }else{
+          this.props.reactiveItem(false);
+        }
+    };
 
     handleScroll() {
     	if(this.mount){
@@ -57,12 +68,11 @@ class Header extends Component{
                             	</a>
                             </div>
                             {/* Logo */}
-                            
 
                             <div className="demo col-6 text-right">
-                            <a className="demo-btn" href="https://github.com/emregurbulak">DEMO</a>
-                            
+                            <button className="demo-btn" onClick={this.handleClickedDemoButton}>DEMO</button>
                             </div>
+
                         </div>
                         </div>
                     </nav>
@@ -74,4 +84,15 @@ class Header extends Component{
 	}
 }
 
-export default Header;
+const mapStateToProps = state => ({
+  isDemoPage: state.isDemoPage
+});
+
+const mapDispatchToProps = dispatch => ({
+  reactiveItem: item => dispatch(ACTIONS.reactiveItem(item))
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header);

@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
 import logo from "../../assets/img/logo_transparent.png"
-import ACTIONS from "../../modules/action";
 import { connect } from "react-redux";
-
 import './Main.css';
 
 class Main extends Component {
   constructor(props){
     super(props);
-    this.handleChangePage = this.handleChangePage.bind(this);
-
     this.state = {};
   }
-
-  handleChangePage = () => {
-    if(!this.props.isDemoPage){
-      this.props.reactiveItem(true);
-    }else{
-      this.props.reactiveItem(false);
-    }
-  };
 
 	render(){
 		return(
@@ -31,7 +19,7 @@ class Main extends Component {
           </p>
           <p><a
             className="App-link"
-            onClick={this.handleChangePage}
+            href="https://tr.reactjs.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,11 +40,9 @@ class Main extends Component {
 }
 
 const mapStateToProps = state => ({
-  isDemoPage: state.isDemoPage
 });
 
 const mapDispatchToProps = dispatch => ({
-  reactiveItem: item => dispatch(ACTIONS.reactiveItem(item))
 });
 
 export default connect(

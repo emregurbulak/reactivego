@@ -97,25 +97,25 @@
         background-color: #ffffff;
         color: #000000 !important;
         font-weight: 600;
-        height: 30px;
+        height: 40px;
     }
     .header-section .demo-btn:hover {
         border-color: #f0542d;
         background-color: #f0542d;
         color: #ffffff !important;
-        height: 30px;
+        height: 40px;
     }
     .stick.header-section .demo-btn {
         border-color: #000000;
         background-color: #000000;
         color: #ffffff !important;
-        height: 30px;
+        height: 40px;
     }
     .stick.header-section .demo-btn:hover {
         border-color: #f0542d;
         background-color: #f0542d;
         color: #ffffff !important;
-        height: 30px;
+        height: 40px;
     }
     .stick .demo-btn {
       border: 2px solid #f0542d;
