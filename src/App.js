@@ -4,7 +4,10 @@ import Header from './components/header/Header';
 import Main from './components/mainPage/Main';
 import ACTIONS from "./modules/action";
 import { connect } from "react-redux";
+import { useAuth0 } from './contexts/auth0-context';
 
+const { isLoading, user, loginWithRedirect, logout } = useAuth0();
+  
 class App extends Component {
   constructor(props){
     super(props);
